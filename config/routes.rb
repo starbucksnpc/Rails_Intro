@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :books
-  resources :villains
-  resources :shorts
-  # Add root route to direct to a main page or dashboard
-  root "home#index"
+  get 'home/about'
+  get 'about', to: 'home#about'
+
+  resources :books, only: [:index, :show]
+  resources :shorts, only: [:index, :show]
+  resources :villains, only: [:index, :show]
+  
+  root 'books#index'
 end
