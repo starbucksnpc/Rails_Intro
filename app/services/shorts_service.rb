@@ -1,6 +1,6 @@
   class ShortsService
     include HTTParty
-    base_uri 'https://stephen-king-api.onrender.com/api/shorts'  
+    base_uri 'https://stephen-king-api.onrender.com/api'  
   
     def self.fetch_shorts
       response = get('/shorts')  

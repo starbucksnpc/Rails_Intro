@@ -1,6 +1,6 @@
 class VillainsService
     include HTTParty
-    base_uri 'https://stephen-king-api.onrender.com/api/villains' 
+    base_uri 'https://stephen-king-api.onrender.com/api' 
   
     def self.fetch_villains
       response = get('/villains') 
